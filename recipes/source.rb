@@ -11,6 +11,16 @@ user node[:openfire][:user] do
   shell '/bin/sh'
 end
 
+unless node[:openfire][:groups].empty?
+  node[:openfire][:groups].each do |grp|
+    group grp do
+      action :modify
+      members node[:openfire][:user]
+      append true
+    end
+  end
+end
+
 local_tarball_path = "#{Chef::Config[:file_cache_path]}/#{node[:openfire][:source_tarball]}"
 
 remote_file local_tarball_path do

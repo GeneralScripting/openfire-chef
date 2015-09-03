@@ -1,4 +1,4 @@
-default[:openfire][:version] = '3.8.2'
+default[:openfire][:version] = '3.10.2'
 
 default[:openfire][:release] = '1'
 default[:openfire][:source_tarball] = "openfire_#{node[:openfire][:version].gsub('.','_')}.tar.gz"
@@ -16,6 +16,7 @@ default[:openfire][:install_method] = case node[:platform_family]
   else
     default[:openfire][:user] = 'openfire'
     default[:openfire][:group] = 'openfire'
+    default[:openfire][:groups] = []
     'source'
 end
 
