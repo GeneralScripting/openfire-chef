@@ -2,7 +2,15 @@
 
 This file is used to list changes made in each version of openfire.
 
-## 0.2.0:
+## 0.2.3:
+
+* Openfire 4.0.0
+
+## 0.2.2:
+
+* Openfire 3.10.2
+
+## 0.2.0
 
 * Add PostGreSQL support via Opscode cookbook
 * Configure Openfire XML file as a Chef template including database connection settings

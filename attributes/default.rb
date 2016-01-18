@@ -1,4 +1,4 @@
-default[:openfire][:version] = '3.10.2'
+default[:openfire][:version] = '4.0.0'
 
 default[:openfire][:release] = '1'
 default[:openfire][:source_tarball] = "openfire_#{node[:openfire][:version].gsub('.','_')}.tar.gz"
